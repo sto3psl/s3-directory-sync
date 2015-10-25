@@ -2,7 +2,7 @@
 This is an utility to upload and sync files in a directory to an s3 bucket.
 
 ### Todo
-- [ ] getFiles() – Get a list of files in your Bucket.
+- [x] getFiles() – Get a list of files in your Bucket.
 - [x] uploadFile() – Upload a file to your Bucket.
 - [ ] uploadFiles() – Upload multiple files to your Bucket.
 - [ ] downloadFiles() - Download multiple files from your Bucket.

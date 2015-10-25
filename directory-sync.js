@@ -21,7 +21,7 @@ class directorySync {
    * @param {string} localDirectory The directory where files get uploaded or downloaded from.
    */
   constructor (localDirectory) {
-    this.directory = localDirectory
+    this.directory = localDirectory + '/'
     this.bucket = 'fabian-test-bucket'
     console.log(this.bucket, this.directory)
   }
@@ -42,8 +42,17 @@ class directorySync {
    * @param
    * @param
    */
-  getFiles () {
-
+  getFiles (params) {
+    s3.listObjects(params, function (err, data) {
+      if (err) {
+        console.log(err)
+      } else {
+        console.log('Bucket ' + data.Name + ' contains:')
+        for (var i = 0; i <= data.Contents.length - 1; i++) {
+          console.log(data.Contents[i].Key)
+        }
+      }
+    })
   }
 
   /**

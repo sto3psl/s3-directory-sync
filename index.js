@@ -1,7 +1,7 @@
 'use strict'
 var Sync = require('./directory-sync')
 
-var syncedFolder = new Sync('./assets/')
+var syncedFolder = new Sync('./assets')
 
 // syncedFolder.createBucket({
 //   Bucket: 'fabian-test-bucket',
@@ -14,11 +14,13 @@ var syncedFolder = new Sync('./assets/')
 //   else console.log(data)
 // })
 
-syncedFolder.uploadFile({
-  Bucket: 'fabian-test-bucket',
-  Key: 'test.txt',
-  Body: 'string',
-  Expires: new Date(2016, 9, 6),
-  ContentType: 'text/plain',
-  ACL: 'private'
-})
+// syncedFolder.uploadFile({
+//   Bucket: 'fabian-test-bucket',
+//   Key: 'test2.txt',
+//   Body: 'string',
+//   Expires: new Date(2016, 9, 6),
+//   ContentType: 'text/plain',
+//   ACL: 'private'
+// })
+
+syncedFolder.getFiles({Bucket: 'fabian-test-bucket'})
