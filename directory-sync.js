@@ -78,8 +78,10 @@ class directorySync {
    *
    * @param {array} files List of files you want to upload.
    */
-  uploadFiles () {
-
+  uploadFiles (params) {
+    for (var i = params.length - 1; i >= 0; i--) {
+      this.uploadFile(params[i])
+    }
   }
 
   /**
