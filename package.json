@@ -1,0 +1,24 @@
+{
+  "name": "s3-directory-sync",
+  "version": "0.1.0",
+  "description": "This is an utility to upload and sync files in a directory to an s3 bucket.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "aws",
+    "s3",
+    "bucket",
+    "sync",
+    "upload",
+    "directory",
+    "files"
+  ],
+  "author": "Fabian Gündel f.guendel@gmail.com (fabian.guendel.io)",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.2.11"
+  }
+}
